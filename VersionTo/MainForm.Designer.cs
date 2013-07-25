@@ -25,23 +25,15 @@ namespace VersionTo
 		/// the contents of this method with the code editor.
 		/// </summary>
 		private void InitializeComponent() {
+			this.components = new System.ComponentModel.Container();
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
-			this.btnSwitch = new System.Windows.Forms.Button();
 			this.cmbVersion = new System.Windows.Forms.ComboBox();
 			this.btnRunWar3 = new System.Windows.Forms.Button();
 			this.btnSetting = new System.Windows.Forms.Button();
 			this.lblVersion = new System.Windows.Forms.Label();
+			this.chkForce = new System.Windows.Forms.CheckBox();
+			this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
 			this.SuspendLayout();
-			// 
-			// btnSwitch
-			// 
-			this.btnSwitch.Location = new System.Drawing.Point(281, 40);
-			this.btnSwitch.Name = "btnSwitch";
-			this.btnSwitch.Size = new System.Drawing.Size(80, 23);
-			this.btnSwitch.TabIndex = 2;
-			this.btnSwitch.Text = "&Switch";
-			this.btnSwitch.UseVisualStyleBackColor = true;
-			this.btnSwitch.Click += new System.EventHandler(this.btnSwitch_Click);
 			// 
 			// cmbVersion
 			// 
@@ -80,17 +72,29 @@ namespace VersionTo
 			this.lblVersion.TabIndex = 0;
 			this.lblVersion.Text = "Warcraft Version:";
 			// 
+			// chkForce
+			// 
+			this.chkForce.AutoSize = true;
+			this.chkForce.Location = new System.Drawing.Point(284, 43);
+			this.chkForce.Name = "chkForce";
+			this.chkForce.Size = new System.Drawing.Size(90, 16);
+			this.chkForce.TabIndex = 2;
+			this.chkForce.Text = "&Force apply";
+			this.toolTip1.SetToolTip(this.chkForce, "Check to enforce a version switch when [Warcraft] is clicked.\r\nIf this option is " +
+        "not checked, [Warcraft] will run a version switch only the selected version is c" +
+        "hanged.");
+			this.chkForce.UseVisualStyleBackColor = true;
+			// 
 			// MainForm
 			// 
-			this.AcceptButton = this.btnSwitch;
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(407, 181);
+			this.Controls.Add(this.chkForce);
 			this.Controls.Add(this.lblVersion);
 			this.Controls.Add(this.btnSetting);
 			this.Controls.Add(this.btnRunWar3);
 			this.Controls.Add(this.cmbVersion);
-			this.Controls.Add(this.btnSwitch);
 			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
 			this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
 			this.MaximizeBox = false;
@@ -105,11 +109,12 @@ namespace VersionTo
 
 		#endregion
 
-		private System.Windows.Forms.Button btnSwitch;
 		private System.Windows.Forms.ComboBox cmbVersion;
 		private System.Windows.Forms.Button btnRunWar3;
 		private System.Windows.Forms.Button btnSetting;
 		private System.Windows.Forms.Label lblVersion;
+		private System.Windows.Forms.CheckBox chkForce;
+		private System.Windows.Forms.ToolTip toolTip1;
 	}
 }
 

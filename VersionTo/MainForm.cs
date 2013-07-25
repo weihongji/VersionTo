@@ -34,7 +34,14 @@ namespace VersionTo
 			LoadVersions();
 		}
 
-		private void btnSwitch_Click(object sender, EventArgs e) {
+		private void SwitchVersion(bool force = false) {
+			if (!force) {
+				String lastPatch = Setting.Get("LastPatch");
+				if (string.Compare(lastPatch, cmbVersion.Text, true) ==0 ) {
+					return; // Switch isn't needed if the selected version hasn't been changed.
+				}
+			}
+
 			String zipAppPath = Setting.Get("7-zip");
 			String warcraftPath = Setting.Get("Warcraft");
 			String patchPath = Setting.Get("Patches");
@@ -60,12 +67,18 @@ namespace VersionTo
 			process.StartInfo.FileName = zipAppPath;
 			process.StartInfo.Arguments = " x \"" + patchPath + "\" -y -o\"" + warcraftPath + "\"";
 			process.Start();
+			process.WaitForExit();
+			process.Close();
 
 			//Update "LastPatch" section in the config file
 			Setting.Set("LastPatch", cmbVersion.Text);
 		}
 
 		private void btnRunWar3_Click(object sender, EventArgs e) {
+			// Switch to the selected version
+			SwitchVersion(chkForce.Checked);
+
+			// Run the game
 			String warcraftPath = Setting.Get("Warcraft");
 			if (warcraftPath.Length > 0 && warcraftPath[warcraftPath.Length - 1] != '\\') {
 				warcraftPath += "\\";
