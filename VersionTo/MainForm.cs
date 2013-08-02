@@ -37,7 +37,7 @@ namespace VersionTo
 		private void SwitchVersion(bool force = false) {
 			if (!force) {
 				String lastPatch = Setting.Get("LastPatch");
-				if (string.Compare(lastPatch, cmbVersion.Text, true) ==0 ) {
+				if (string.Compare(lastPatch, cmbVersion.Text, true) == 0) {
 					return; // Switch isn't needed if the selected version hasn't been changed.
 				}
 			}

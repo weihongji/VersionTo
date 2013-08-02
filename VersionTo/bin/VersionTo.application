@@ -8,7 +8,7 @@
         <beforeApplicationStartup />
       </update>
     </subscription>
-    <deploymentProvider codebase="http://hongji/VersionTo/VersionTo.application" />
+    <deploymentProvider codebase="http://zhiran/VersionTo/VersionTo.application" />
   </deployment>
   <dependency>
     <dependentAssembly dependencyType="install" codebase="VersionTo.exe.manifest" size="3575">
@@ -18,7 +18,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>s1lnDFwQvztk6ttUlbGcDCdv97w=</dsig:DigestValue>
+        <dsig:DigestValue>hTbGxzRGXNMoLb4nRLt6kOIrviQ=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
