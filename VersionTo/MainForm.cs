@@ -76,7 +76,7 @@ namespace VersionTo
 
 		private void btnRunWar3_Click(object sender, EventArgs e) {
 			// Switch to the selected version
-			SwitchVersion(chkForce.Checked);
+			SwitchVersion(chkEnforce.Checked);
 
 			// Run the game
 			String warcraftPath = Setting.Get("Warcraft");

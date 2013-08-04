@@ -31,7 +31,7 @@ namespace VersionTo
 			this.btnRunWar3 = new System.Windows.Forms.Button();
 			this.btnSetting = new System.Windows.Forms.Button();
 			this.lblVersion = new System.Windows.Forms.Label();
-			this.chkForce = new System.Windows.Forms.CheckBox();
+			this.chkEnforce = new System.Windows.Forms.CheckBox();
 			this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
 			this.SuspendLayout();
 			// 
@@ -45,7 +45,7 @@ namespace VersionTo
 			// 
 			// btnRunWar3
 			// 
-			this.btnRunWar3.Location = new System.Drawing.Point(95, 90);
+			this.btnRunWar3.Location = new System.Drawing.Point(109, 90);
 			this.btnRunWar3.Name = "btnRunWar3";
 			this.btnRunWar3.Size = new System.Drawing.Size(80, 23);
 			this.btnRunWar3.TabIndex = 3;
@@ -55,7 +55,7 @@ namespace VersionTo
 			// 
 			// btnSetting
 			// 
-			this.btnSetting.Location = new System.Drawing.Point(232, 90);
+			this.btnSetting.Location = new System.Drawing.Point(246, 90);
 			this.btnSetting.Name = "btnSetting";
 			this.btnSetting.Size = new System.Drawing.Size(80, 23);
 			this.btnSetting.TabIndex = 4;
@@ -72,26 +72,26 @@ namespace VersionTo
 			this.lblVersion.TabIndex = 0;
 			this.lblVersion.Text = "Warcraft Version:";
 			// 
-			// chkForce
+			// chkEnforce
 			// 
-			this.chkForce.AutoSize = true;
-			this.chkForce.Location = new System.Drawing.Point(284, 43);
-			this.chkForce.Name = "chkForce";
-			this.chkForce.Size = new System.Drawing.Size(90, 16);
-			this.chkForce.TabIndex = 2;
-			this.chkForce.Text = "&Force apply";
-			this.toolTip1.SetToolTip(this.chkForce, "Check to enforce a version switch when [Warcraft] is clicked.\r\nIf this option is " +
-        "not checked, [Warcraft] will run a version switch only the selected version is c" +
-        "hanged.");
-			this.chkForce.UseVisualStyleBackColor = true;
+			this.chkEnforce.AutoSize = true;
+			this.chkEnforce.Location = new System.Drawing.Point(284, 43);
+			this.chkEnforce.Name = "chkEnforce";
+			this.chkEnforce.Size = new System.Drawing.Size(126, 16);
+			this.chkEnforce.TabIndex = 2;
+			this.chkEnforce.Text = "&Enforce to switch";
+			this.toolTip1.SetToolTip(this.chkEnforce, "Check to enforce a version switch when [Warcraft] is clicked.\r\nIf this option is " +
+        "not checked, [Warcraft] runs a version switch only when the selected version is " +
+        "changed.");
+			this.chkEnforce.UseVisualStyleBackColor = true;
 			// 
 			// MainForm
 			// 
 			this.AcceptButton = this.btnRunWar3;
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(407, 181);
-			this.Controls.Add(this.chkForce);
+			this.ClientSize = new System.Drawing.Size(434, 181);
+			this.Controls.Add(this.chkEnforce);
 			this.Controls.Add(this.lblVersion);
 			this.Controls.Add(this.btnSetting);
 			this.Controls.Add(this.btnRunWar3);
@@ -114,7 +114,7 @@ namespace VersionTo
 		private System.Windows.Forms.Button btnRunWar3;
 		private System.Windows.Forms.Button btnSetting;
 		private System.Windows.Forms.Label lblVersion;
-		private System.Windows.Forms.CheckBox chkForce;
+		private System.Windows.Forms.CheckBox chkEnforce;
 		private System.Windows.Forms.ToolTip toolTip1;
 	}
 }
